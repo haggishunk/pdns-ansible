@@ -1,4 +1,5 @@
 config-dir={{ pdns_config_dir }}
+socket-dir=/run/{{ pdns_service_name }}
 {% for config_item, value in pdns_config.items() | sort() %}
 {% if config_item not in ["config-dir", "launch", "setuid", "setgid"] %}
 {% if value is sameas True %}
